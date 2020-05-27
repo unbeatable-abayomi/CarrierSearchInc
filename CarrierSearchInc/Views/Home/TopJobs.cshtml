@@ -11,7 +11,7 @@
             <img src="~/images/undraw_active_options_8je6.png" width="650" />
         </div>
         <div class="col-md-12">
-            <h3 class="display-4 text-center">Top Jobs</h3>
+            <h3 class="display-4 text-center">See Top Jobs</h3>
         </div>
 
     </div>
@@ -84,6 +84,45 @@
                             <td>@Finance.PostedDate</td>
                             <td>@Finance.CloseDate</td>
                             <td>@Finance.Section</td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container text-center mt-5">
+    <div class="row">
+
+        <div class="col-md-12 table-responsive">
+            <h6 class="display-4 mb-5">ICT</h6>
+            <table class="table border-1">
+                <thead>
+                    <tr>
+                        <td>Position</td>
+                        <td>Employer</td>
+
+
+                        <td>Salary Range</td>
+                        <td>Posted Date</td>
+                        <td>Closing Date</td>
+                        <td>Section</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var iCT in Model.iCTs)
+                    {
+                        <tr>
+                            <td>@iCT.Position</td>
+                            <td>@iCT.Employer</td>
+                            <td>@iCT.SalaryRange</td>
+                            <td>@iCT.PostedDate</td>
+                            <td>@iCT.CloseDate</td>
+                            <td>@iCT.Section</td>
 
                         </tr>
                     }
