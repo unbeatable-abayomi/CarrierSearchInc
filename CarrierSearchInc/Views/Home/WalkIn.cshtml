@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewData["Title"] = "WalkIn";
+}
+@model CarrierSearchInc.Models.WalkInInterviews
+<h1>WalkIn</h1>
+
+
+
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="~/images/undraw_interview_rmcf.png" width="650" />
+        </div>
+        <div class="col-md-12">
+            <h3 class="display-4 text-center">Our Walk In Interviews</h3>
+        </div>
+
+    </div>
+</div>
+
+<div class="container text-center mt-5">
+    <div class="row">
+
+        <div class="col-md-12 table-responsive">
+            <h6 class="display-4 mb-5"> Monday</h6>
+            <table class="table border-1">
+                <thead>
+                    <tr>
+                        <td>Employer</td>
+                        <td>Category</td>
+                        <td>Position</td>
+                        <td>Qualification</td>
+                        <td>Exeperince</td>
+                        <td>Interview Date</td>
+                        <td>Interview Time</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Monday in Model.MondayInterviews)
+                    {
+                        <tr>
+                            <td>@Monday.Employer</td>
+                            <td>@Monday.Category</td>
+                            <td>@Monday.Position</td>
+                            <td>@Monday.Qualifactions</td>
+                            <td>@Monday.YearsOfExpericence</td>
+                            <td>@Monday.DateOfInterview</td>
+                            <td>@Monday.TimeOfInterview</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<div class="container text-center mt-5">
+    <div class="row">
+
+        <div class="col-md-12 table-responsive">
+            <h6 class="display-4 mb-5">Wednesday</h6>
+            <table class="table border-1">
+                <thead>
+                    <tr>
+                        <td>Employer</td>
+                        <td>Category</td>
+                        <td>Position</td>
+                        <td>Qualification</td>
+                        <td>Exeperince</td>
+                        <td>Interview Date</td>
+                        <td>Interview Time</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Wednesday in Model.wednesdayInterviews)
+                    {
+                        <tr>
+                            <td>@Wednesday.Employer</td>
+                            <td>@Wednesday.Category</td>
+                            <td>@Wednesday.Position</td>
+                            <td>@Wednesday.Qualifactions</td>
+                            <td>@Wednesday.YearsOfExpericence</td>
+                            <td>@Wednesday.DateOfInterview</td>
+                            <td>@Wednesday.TimeOfInterview</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+<div class="container text-center mt-5">
+    <div class="row">
+
+        <div class="col-md-12 table-responsive">
+            <h6 class="display-4 mb-5">Friday</h6>
+            <table class="table border-1">
+                <thead>
+                    <tr>
+                        <td>Employer</td>
+                        <td>Category</td>
+                        <td>Position</td>
+                        <td>Qualification</td>
+                        <td>Exeperince</td>
+                        <td>Interview Date</td>
+                        <td>Interview Time</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Friday in Model.fridayInterviews)
+                    {
+                        <tr>
+                            <td>@Friday.Employer</td>
+                            <td>@Friday.Category</td>
+                            <td>@Friday.Position</td>
+                            <td>@Friday.Qualifactions</td>
+                            <td>@Friday.YearsOfExpericence</td>
+                            <td>@Friday.DateOfInterview</td>
+                            <td>@Friday.TimeOfInterview</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+

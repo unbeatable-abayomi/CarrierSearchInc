@@ -21,5 +21,11 @@ namespace CarrierSearchInc.Models
             new WednesdayInterviews (){Employer="Stripe Communcations",Category="ICT",Position="Andorid Developer",Qualifactions="Bsc Comp Science",YearsOfExpericence ="3 years",DateOfInterview="27/05/2020",TimeOfInterview="12noon"},
             new WednesdayInterviews (){Employer="SoftCom",Category="ICT",Position="Team Lead(Frontend)",Qualifactions="Msc Comp Sceince",YearsOfExpericence ="5 years",DateOfInterview="27/05/2020",TimeOfInterview="2pm"}
         };
+        public List<FridayInterviews> fridayInterviews = new List<FridayInterviews>()
+        {
+            new FridayInterviews  (){Employer="North Switch",Category="ICT",Position="DevOps",Qualifactions="Msc Comp Sceince",YearsOfExpericence ="5 years",DateOfInterview="29/05/2020",TimeOfInterview="1pm"},
+            new FridayInterviews  (){Employer="Telegram",Category="ICT",Position="UI/UX Designer",Qualifactions="Bsc",YearsOfExpericence ="2 years",DateOfInterview="29/05/2020",TimeOfInterview="2pm"},
+                new FridayInterviews  (){Employer="FlutterWave",Category="ICT",Position="(Lead)UI/UX Designer",Qualifactions="Bsc",YearsOfExpericence ="4 years",DateOfInterview="29/05/2020",TimeOfInterview="3pm"}
+        };
     }
 }
