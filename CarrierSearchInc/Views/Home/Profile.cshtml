@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewData["Title"] = "Profile";
+}
+@model List<CarrierSearchInc.Models.Profiles>
+
+<h1>Profile</h1>
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="~/images/undraw_community_8nwl.png" width="650"/>
+        </div>
+        <div class="col-md-12">
+            <h3 class="display-4 text-center">Our Clients</h3>
+        </div>
+      
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <!--Carousel Wrapper-->
+            <div id="carousel-with-lb" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                <!--Controls-->
+                <div class="controls-top">
+                    @*<a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </a>
+                    <a class="btn-floating btn-secondary" href="#carousel-with-lb" data-slide="next">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>*@
+                </div>
+                <!--/.Controls-->
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-with-lb" data-slide-to="0" class="active secondary-color"></li>
+                    <li data-target="#carousel-with-lb" data-slide-to="1" class="secondary-color"></li>
+                    @*<li data-target="#carousel-with-lb" data-slide-to="2" class="secondary-color"></li>*@
+                </ol>
+                <!--/.Indicators-->
+                <!--Slides and lightbox-->
+
+                <div class="carousel-inner mdb-lightbox" role="listbox">
+                    <div id="mdb-lightbox-ui"></div>
+                    <!--First slide-->
+                    <div class=" carousel-item active text-center">
+
+                        <figure class="col-md-3 d-md-inline-block">
+
+
+                            <img src="~/images/bently.jpg" width="150" class="img-fluid">
+
+                        </figure>
+
+                        <figure class="col-md-3 d-md-inline-block">
+
+                            <img src="~/images/jeep.jpg" width="150" class="img-fluid">
+
+                        </figure>
+                        <figure class="col-md-3 d-md-inline-block">
+
+                            <img src="~/images/jaguar.jpg" width="150" class="img-fluid">
+
+                        </figure>
+
+
+
+
+                    </div>
+                    <!--/.First slide-->
+                    <!--Second slide-->
+                    <div class="carousel-item text-center">
+
+                <figure class="col-md-3 d-md-inline-block">
+
+
+                            <img src="~/images/gucci.jpg" width="150" class="img-fluid">
+
+                        </figure>
+
+                        <figure class="col-md-3 d-md-inline-block">
+
+                            <img src="~/images/puma2.jpg" width="150" class="img-fluid">
+
+                        </figure>
+                        <figure class="col-md-3 d-md-inline-block">
+
+                            <img src="~/images/nike.jpg" width="150" class="img-fluid">
+
+                        </figure>
+
+
+
+
+                    </div>
+                  
+
+                </div>
+                <!--/.Slides-->
+
+            </div>
+            <!--/.Carousel Wrapper-->
+        </div>
+    </div>
+</div>
+
+<div class="container text-center mt-5">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 table-responsive">
+            <h6 class="display-4 mb-5"> Our Top 5 Employers</h6>
+            <table class="table border-1">
+                <thead>
+                    <tr>
+                        <td>Company Name</td>
+                        <td>Country</td>
+                        <td>Number Of Candidates Interveiwed</td>
+                        <td>Number Of Candidates Employeed</td>
+                        <td>Last Of Last Employeed</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Profiles in Model)
+                    {
+                    <tr>
+                        <td>@Profiles.CompanyName</td>
+                        <td>@Profiles.Country</td>
+                        <td>@Profiles.NumberInterviewed</td>
+                        <td>@Profiles.NumberEmployeed</td>
+                        <td>@Profiles.DateOfLastEmployment</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+

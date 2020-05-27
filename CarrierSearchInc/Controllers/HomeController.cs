@@ -28,6 +28,20 @@ namespace CarrierSearchInc.Controllers
             return View();
         }
 
+        public IActionResult Profile()
+        {
+            List<Profiles> profiles = new List<Profiles>()
+            {
+                new Profiles(){CompanyName="Nike",Country="USA",NumberInterviewed=123,NumberEmployeed=92,DateOfLastEmployment="5/25/2020"},
+              new Profiles  {CompanyName="Bently",Country="Germany",NumberInterviewed=153,NumberEmployeed=82,DateOfLastEmployment="5/23/2020"},
+               new Profiles  {CompanyName="Gucci",Country="Italy",NumberInterviewed=103,NumberEmployeed=80,DateOfLastEmployment="5/21/2020"},
+
+            new Profiles { CompanyName = "Puma", Country = "USA", NumberInterviewed = 113, NumberEmployeed = 40, DateOfLastEmployment = "5/19/2020" },
+            new Profiles { CompanyName = "Jaguar", Country = "Sweden", NumberInterviewed = 93, NumberEmployeed = 35, DateOfLastEmployment = "5/15/2020" }
+            };
+            return View(profiles);
+        }
+
         public IActionResult Privacy()
         {
             return View();
