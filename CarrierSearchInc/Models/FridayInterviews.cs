@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.OData.Edm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,7 +15,7 @@ namespace CarrierSearchInc.Models
         public string Qualifactions { get; set; }
         public string YearsOfExpericence { get; set; }
 
-        public string DateOfInterview { get; set; }
+        public Date DateOfInterview { get; set; }
         public string TimeOfInterview { get; set; }
     }
 }

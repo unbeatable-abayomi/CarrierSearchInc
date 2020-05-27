@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewData["Title"] = "TopJobs";
+}
+@model CarrierSearchInc.Models.WalkInInterviews
+<h1>TopJobs</h1>
+
+<div class="container mb-5">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <img src="~/images/undraw_active_options_8je6.png" width="650" />
+        </div>
+        <div class="col-md-12">
+            <h3 class="display-4 text-center">Top Jobs</h3>
+        </div>
+
+    </div>
+</div>
+
+<div class="container text-center mt-5">
+    <div class="row">
+
+        <div class="col-md-12 table-responsive">
+            <h6 class="display-4 mb-5">Marketing</h6>
+            <table class="table border-1">
+                <thead>
+                    <tr>
+                        <td>Position</td>
+                        <td>Employer</td>
+
+
+                        <td>Salary Range</td>
+                        <td>Posted Date</td>
+                        <td>Closing Date</td>
+                        <td>Section</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Marketing in Model.marketings)
+                    {
+                        <tr>
+                            <td>@Marketing.Position</td>
+                            <td>@Marketing.Employer</td>
+                            <td>@Marketing.SalaryRange</td>
+                            <td>@Marketing.PostedDate</td>
+                            <td>@Marketing.CloseDate</td>
+                            <td>@Marketing.Section</td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container text-center mt-5">
+    <div class="row">
+
+        <div class="col-md-12 table-responsive">
+            <h6 class="display-4 mb-5">Finances</h6>
+            <table class="table border-1">
+                <thead>
+                    <tr>
+                        <td>Position</td>
+                        <td>Employer</td>
+
+
+                        <td>Salary Range</td>
+                        <td>Posted Date</td>
+                        <td>Closing Date</td>
+                        <td>Section</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var Finance in Model.finances)
+                    {
+                        <tr>
+                            <td>@Finance.Position</td>
+                            <td>@Finance.Employer</td>
+                            <td>@Finance.SalaryRange</td>
+                            <td>@Finance.PostedDate</td>
+                            <td>@Finance.CloseDate</td>
+                            <td>@Finance.Section</td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

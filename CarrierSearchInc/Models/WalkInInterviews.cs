@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using Microsoft.OData.Edm;
 namespace CarrierSearchInc.Models
 {
     public class WalkInInterviews
@@ -23,9 +23,29 @@ namespace CarrierSearchInc.Models
         };
         public List<FridayInterviews> fridayInterviews = new List<FridayInterviews>()
         {
-            new FridayInterviews  (){Employer="North Switch",Category="ICT",Position="DevOps",Qualifactions="Msc Comp Sceince",YearsOfExpericence ="5 years",DateOfInterview="29/05/2020",TimeOfInterview="1pm"},
-            new FridayInterviews  (){Employer="Telegram",Category="ICT",Position="UI/UX Designer",Qualifactions="Bsc",YearsOfExpericence ="2 years",DateOfInterview="29/05/2020",TimeOfInterview="2pm"},
-                new FridayInterviews  (){Employer="FlutterWave",Category="ICT",Position="(Lead)UI/UX Designer",Qualifactions="Bsc",YearsOfExpericence ="4 years",DateOfInterview="29/05/2020",TimeOfInterview="3pm"}
+            new FridayInterviews  (){Employer="North Switch",Category="ICT",Position="DevOps",Qualifactions="Msc Comp Sceince",YearsOfExpericence ="5 years",DateOfInterview=Date.Parse("05/25/2020"),TimeOfInterview="1pm"},
+            new FridayInterviews  (){Employer="Telegram",Category="ICT",Position="UI/UX Designer",Qualifactions="Bsc",YearsOfExpericence ="2 years",DateOfInterview=Date.Parse("05/25/2020"),TimeOfInterview="2pm"},
+                new FridayInterviews  (){Employer="FlutterWave",Category="ICT",Position="(Lead)UI/UX Designer",Qualifactions="Bsc",YearsOfExpericence ="4 years",DateOfInterview=Date.Parse("05/25/2020"),TimeOfInterview="3pm"}
+        };
+
+
+
+        public List<Marketing> marketings = new List<Marketing>()
+        {
+            new Marketing (){Position="Marketing Manager",Employer="Nokia Int'l", SalaryRange="$20,000-$30,000",PostedDate=Date.Parse("05/12/2020"),CloseDate=Date.Parse("05/17/2020")},
+             new Marketing (){Position="Marketing Personel",Employer="Sterling Bank", SalaryRange="$2000-$3000",PostedDate=Date.Parse("05/13/2020"),CloseDate=Date.Parse("05/18/2020")},
+              new Marketing (){Position="Head Marketing Africa",Employer="MicroSoft", SalaryRange="$40,000-$50,000",PostedDate=Date.Parse("05/14/2020"),CloseDate=Date.Parse("05/21/2020")},
+        };
+
+        public List<Finance> finances = new List<Finance>()
+        {
+            new Finance (){Position="Accountant",Employer="Stanbic Bank", SalaryRange = "$35,000-$45,000",PostedDate=Date.Now,CloseDate=Date.Parse("05/29/2020")},
+            new Finance (){Position="Financial Secetary",Employer="Eco Bank", SalaryRange = "$15,000-$25,000",PostedDate=Date.Now,CloseDate=Date.Parse("05/30/2020")}
+        };
+        public List<ICT> iCTs = new List<ICT>()
+        {
+            new ICT (){Position="Andorid Developer", Employer="Git Hub",SalaryRange="$55,000-$60,000",PostedDate=Date.Now,CloseDate=Date.Parse("05/31/2020")},
+            new ICT (){Position="Java Developer", Employer="FlutterWave",SalaryRange="$45,000-$50,000",PostedDate=Date.Now,CloseDate=Date.Parse("06/01/2020")}
         };
     }
 }

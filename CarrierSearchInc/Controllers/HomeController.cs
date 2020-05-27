@@ -49,6 +49,12 @@ namespace CarrierSearchInc.Controllers
             return View(walkInInterviews);
         }
 
+        public IActionResult TopJobs()
+        {
+            WalkInInterviews walkInInterviews = new WalkInInterviews();
+            return View(walkInInterviews);
+        }
+
         public IActionResult Privacy()
         {
             return View();
