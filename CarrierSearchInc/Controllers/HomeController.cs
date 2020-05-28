@@ -58,15 +58,18 @@ namespace CarrierSearchInc.Controllers
         public IActionResult PostJobs()
         {
             PostJobs postJobs = new PostJobs() {
-                AllIndustries = Enum.GetValues(typeof(FunctionalArea)).Cast<Industry>().ToList(),
-                AllfunctionalAreas = Enum.GetValues(typeof(FunctionalArea)).Cast<FunctionalArea>().ToList(),
-                AllQualifications = Enum.GetValues(typeof(Qualification)).Cast<Qualification>().ToList(),
-                AllExperiences = Enum.GetValues(typeof(Experience)).Cast<Experience>().ToList()
+                //AllIndustries = Enum.GetValues(typeof(FunctionalArea)).Cast<Industry>().ToList(),
+                //AllfunctionalAreas = Enum.GetValues(typeof(FunctionalArea)).Cast<FunctionalArea>().ToList(),
+                //AllQualifications = Enum.GetValues(typeof(Qualification)).Cast<Qualification>().ToList()
+                //AllExperiences = Enum.GetValues(typeof(Experience)).Cast<Experience>().ToList()
             };
 
             return View(postJobs);
         }
-
+        public IActionResult FAQs()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();

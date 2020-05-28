@@ -13,18 +13,20 @@ namespace CarrierSearchInc.Models
         public string Role { get; set; }
         public string Industry { get; set; }
 
-        public IEnumerable<Industry> AllIndustries { get; set; }
+        //public IEnumerable<Industry> AllIndustries { get; set; }
         public string FunctionalArea { get; set; }
 
-        public IEnumerable<FunctionalArea> AllfunctionalAreas { get; set; }
+        //public IEnumerable<FunctionalArea> AllfunctionalAreas { get; set; }
 
         public string Experience { get; set; }
 
-        public IEnumerable<Experience> AllExperiences { get; set; }
+        //public IEnumerable<Experience> AllExperiences { get; set; }
 
         public string Qualification { get; set; }
 
-        public IEnumerable<Qualification> AllQualifications { get; set; }
+        //public IEnumerable<Qualification> AllQualifications { get; set; }
+
+        
 
         public Date PostDate { get; set; }
 

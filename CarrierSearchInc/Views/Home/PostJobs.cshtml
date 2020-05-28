@@ -6,7 +6,7 @@
 <h1>PostJobs</h1>
 
 
-<div class="container mb-5">
+<div class="container mt-5">
     <div class="row">
         <div class="col-md-12 text-center">
             <img src="~/images/undraw_preferences_uuo2.png" width="650" />
@@ -39,13 +39,15 @@
 
                 <label asp-for="Industry" class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10">
-                    <select asp-for="Industry" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<Industry>()"></select>
+                    <select asp-for="Industry" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<Industries>()"></select>
                 </div>
 
-                <label asp-for="Qualification" class="col-sm-2 col-form-label"></label>
+                <label asp-for="Qualification"  class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10">
-                    <select asp-for="Qualification" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<Qualification>()"></select>
+                    <select asp-for="Qualification" class="custom-select mr-sm-2" asp-items="Html.GetEnumSelectList<Qualifications>()"></select>
                 </div>
+
+               
 
                 <label asp-for="PostDate" class="col-sm-2"></label>
                 <div class="col-sm-10">

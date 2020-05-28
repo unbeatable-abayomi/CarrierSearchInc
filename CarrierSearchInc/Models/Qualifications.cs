@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace CarrierSearchInc.Models
 {
-    public enum Industry
+    public enum Qualifications
     {
-        Technology,Agriculture,Banking,OilandGas
+        SSCE,OND,HND,BSc,Msc,Phd
     }
 }

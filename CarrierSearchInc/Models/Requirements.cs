@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace CarrierSearchInc.Models
 {
-    public enum Qualification
+    public enum Requirements
     {
-        OND,HND,BSc,Msc,Phd
+        one,two,three,four,five
     }
 }
