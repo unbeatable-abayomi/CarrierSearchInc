@@ -6,16 +6,24 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CarrierSearchInc.Models;
+using CarrierSearchInc.Services;
+using System.Collections;
 
 namespace CarrierSearchInc.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private WalkinInterviewsService walkInInterviews;
+        private TopJobsService topJobs;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, WalkinInterviewsService walkin, TopJobsService jobs)
         {
             _logger = logger;
+          
+            this.walkInInterviews = walkin;
+            this.topJobs = jobs;
+
         }
 
         public IActionResult Index()
@@ -45,14 +53,27 @@ namespace CarrierSearchInc.Controllers
 
         public IActionResult WalkIn()
         {
-            WalkInInterviews walkInInterviews = new WalkInInterviews();
-            return View(walkInInterviews);
+            //WalkInInterviews walkInInterviews = new WalkInInterviews();
+            List<MondayInterviews> mondayInterviews = walkInInterviews.GetMondayInterviews();
+            List<WednesdayInterviews> wednesdayInterviews = walkInInterviews.GetWednesdayInterviews();
+            List<FridayInterviews> fridayInterviews = walkInInterviews.GetFridayInterviews();
+
+
+            ArrayList interviews = new ArrayList() { mondayInterviews, wednesdayInterviews,fridayInterviews };
+            return View(interviews);
         }
 
         public IActionResult TopJobs()
         {
             WalkInInterviews walkInInterviews = new WalkInInterviews();
-            return View(walkInInterviews);
+
+            List<Finance> financesTopJobs = topJobs.GetFinancesJobs();
+            List<ICT> iCTsTopJobs = topJobs.GetICTJobs();
+            List<Marketing> marketings = topJobs.GetMarketingsJobs();
+
+            ArrayList allTopJobs = new ArrayList() { financesTopJobs,iCTsTopJobs,marketings };
+
+            return View(allTopJobs);
         }
 
         public IActionResult PostJobs()
@@ -65,6 +86,11 @@ namespace CarrierSearchInc.Controllers
             };
 
             return View(postJobs);
+        }
+
+        public IActionResult LoginView(Login login)
+        {
+            return View();
         }
         public IActionResult FAQs()
         {

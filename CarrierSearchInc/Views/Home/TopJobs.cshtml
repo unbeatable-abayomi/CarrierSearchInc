@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "TopJobs";
 }
-@model CarrierSearchInc.Models.WalkInInterviews
+@*@model CarrierSearchInc.Models.WalkInInterviews*@
 <h1>TopJobs</h1>
 
 <div class="container mb-5">
@@ -36,7 +36,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var Marketing in Model.marketings)
+                    @foreach (var Marketing in Model[2])
                     {
                         <tr>
                             <td>@Marketing.Position</td>
@@ -75,7 +75,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var Finance in Model.finances)
+                    @foreach (var Finance in Model[0])
                     {
                         <tr>
                             <td>@Finance.Position</td>
@@ -114,7 +114,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var iCT in Model.iCTs)
+                    @foreach (var iCT in Model[1])
                     {
                         <tr>
                             <td>@iCT.Position</td>
