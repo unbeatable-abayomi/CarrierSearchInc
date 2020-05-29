@@ -92,6 +92,12 @@ namespace CarrierSearchInc.Controllers
         {
             return View();
         }
+
+        public IActionResult SignupView(SignUp signUp )
+        {
+
+            return View();
+        }
         public IActionResult FAQs()
         {
             return View();
